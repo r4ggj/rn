@@ -3,40 +3,10 @@
  * https://github.com/facebook/react-native
  * @flow
  */
- import './ReactotronConfig'
-import React, { Component } from 'react';
+import './ReactotronConfig'
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
-import ScrollableDemo from './src/pages/ScrollableDemo'
-export default class rn extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <ScrollableDemo/>
-      </View>
-    );
-  }
-}
+import App from './src/App'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('rn', () => rn);
+AppRegistry.registerComponent('rn', () => App);
