@@ -22,13 +22,20 @@ import StacksOverTabs from './StacksOverTabs';
 import SimpleStack from './SimpleStack';
 import SimpleTabs from './SimpleTabs';
 
-import ScrollableDemo from './pages/ScrollableDemo'
+import ScrollableTabViewDemo from './pages/ScrollableTabViewDemo'
+import VideoDemo from './pages/VideoDemo'
+import VideoPlayer from './components/VideoPlayer'
 
 const ExampleRoutes = {
+  VideoDemo:{
+    name: 'VideoDemo',
+    description: 'VideoDemo',
+    screen: VideoDemo,
+  },
   ScrollableTabView:{
     name: 'React-Native-Scrollable-Tab-View',
     description: 'Scrollable Tab View Demo',
-    screen: ScrollableDemo,
+    screen: ScrollableTabViewDemo,
   },
   SimpleStack: {
     name: 'React Navigation Stack Example',
@@ -115,6 +122,9 @@ const MainScreen = ({ navigation }) => (
 const AppNavigator = StackNavigator(
   {
     ...ExampleRoutes,
+    VideoPlayer:{
+      screen:VideoPlayer
+    },
     Index: {
       screen: MainScreen,
     },
