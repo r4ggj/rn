@@ -25,8 +25,20 @@ import SimpleTabs from './SimpleTabs';
 import ScrollableTabViewDemo from './pages/ScrollableTabViewDemo'
 import VideoDemo from './pages/VideoDemo'
 import VideoPlayer from './components/VideoPlayer'
+import TeasetDemo from './pages/TeasetDemo'
+import MaterialDemo from './pages/MaterialDemo'
 
 const ExampleRoutes = {
+  MaterialDemo:{
+    name: 'MaterialDemo',
+    description: 'MaterialDemo',
+    screen: MaterialDemo,
+  },
+  TeasetDemo:{
+    name: 'TeasetDemo',
+    description: 'TeasetDemo',
+    screen: TeasetDemo,
+  },
   VideoDemo:{
     name: 'VideoDemo',
     description: 'VideoDemo',
