@@ -25,8 +25,14 @@ import SimpleTabs from './SimpleTabs';
 import ScrollableTabViewDemo from './pages/ScrollableTabViewDemo'
 import VideoDemo from './pages/VideoDemo'
 import VideoPlayer from './components/VideoPlayer'
+import AnzhuApp from './pages/AnzhuApp'
 
 const ExampleRoutes = {
+  AnzhuApp:{
+      name: 'AnzhuApp',
+      description: 'AnzhuApp',
+      screen: AnzhuApp,
+  },
   VideoDemo:{
     name: 'VideoDemo',
     description: 'VideoDemo',

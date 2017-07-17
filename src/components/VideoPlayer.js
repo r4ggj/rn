@@ -18,24 +18,39 @@ class VideoPlayer extends Component{
     resizeMode: 'contain',
     duration: 0.0,
     currentTime: 0.0,
-    paused: true,
+    paused: false,
     source:null,
     ready:false
   };
   componentDidMount(){
     const {navigate,goBack,state} = this.props.navigation;
-    InteractionManager.runAfterInteractions(()=>this.setState({
-      source:state.params.source
-    }));
+    if(this.props.autoPlay||state.params.autoPlay){
+      this.play();
+    }
   }
+
+  play=()=>{
+    const {navigate,goBack,state} = this.props.navigation;
+    this.setState({
+      source:state.params.source,
+      paused:false
+    });
+  }
+
   componentWillUnmount(){
 
   }
   video: Video;
+  onLoadStart=()=>{
+    this.setState({ paused: true })
+    this.video.seek(0)
+  }
   onLoad = (data) => {
-    this.setState({ duration: data.duration},()=>{
-      InteractionManager.runAfterInteractions(()=>this.setState({ready:true}))
-    });
+    this.setState({
+       duration: data.duration,
+       ready:true,
+       paused:false
+     });
   };
 
   onProgress = (data) => {
@@ -106,7 +121,7 @@ class VideoPlayer extends Component{
           <TouchableOpacity
             activeOpacity={1}
             style={styles.fullScreen}
-            onPress={() => this.setState({ paused: !this.state.paused })}
+            onPress={() =>!this.state.source?this.play():this.setState({ paused: !this.state.paused })}
           >
             <Video
               ref={this._bindVideoRef}
@@ -119,6 +134,7 @@ class VideoPlayer extends Component{
               volume={this.state.volume}
               muted={this.state.muted}
               resizeMode={this.state.resizeMode}
+              onLoadStart={this.onLoadStart}
               onLoad={this.onLoad}
               onProgress={this.onProgress}
               onEnd={this.onEnd}
