@@ -27,6 +27,7 @@ import VideoDemo from './pages/VideoDemo'
 import VideoPlayer from './components/VideoPlayer'
 import TeasetDemo from './pages/TeasetDemo'
 import MaterialDemo from './pages/MaterialDemo'
+import AnzhuApp from './pages/AnzhuApp'
 
 const ExampleRoutes = {
   MaterialDemo:{
@@ -34,10 +35,15 @@ const ExampleRoutes = {
     description: 'MaterialDemo',
     screen: MaterialDemo,
   },
-  TeasetDemo:{
-    name: 'TeasetDemo',
-    description: 'TeasetDemo',
-    screen: TeasetDemo,
+  TeasetDemo: {
+      name: 'TeasetDemo',
+      description: 'TeasetDemo',
+      screen: TeasetDemo,
+  },
+  AnzhuApp:{
+      name: 'AnzhuApp',
+      description: 'AnzhuApp',
+      screen: AnzhuApp,
   },
   VideoDemo:{
     name: 'VideoDemo',
