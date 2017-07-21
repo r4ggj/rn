@@ -27,8 +27,14 @@ import VideoDemo from './pages/VideoDemo'
 import VideoPlayer from './components/VideoPlayer'
 import TeasetDemo from './pages/TeasetDemo'
 import MaterialDemo from './pages/MaterialDemo'
+import NachosUIDemo from './pages/NachosUIDemo'
 
 const ExampleRoutes = {
+  NachosUIDemo:{
+    name: 'NachosUIDemo',
+    description: 'NachosUIDemo',
+    screen: NachosUIDemo,
+  },
   MaterialDemo:{
     name: 'MaterialDemo',
     description: 'MaterialDemo',
