@@ -6,8 +6,7 @@
 import {
   AppRegistry
 } from 'react-native';
-import App from './src/App'
-import {Theme} from 'teaset';
+import App from './src/App';
 const returnTrue=()=>true;
 const returnFalse=()=>false;
 const returnUndefined=()=>undefined;
@@ -16,7 +15,5 @@ global.returnTrue=returnTrue;
 global.returnFalse=returnFalse;
 global.returnNull=returnNull;
 global.returnUndefined=returnUndefined;
-
-Theme.set(Theme.themes.default);
 
 AppRegistry.registerComponent('rn', () => App);

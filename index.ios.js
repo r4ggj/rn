@@ -17,6 +17,4 @@ global.returnFalse=returnFalse;
 global.returnNull=returnNull;
 global.returnUndefined=returnUndefined;
 
-Theme.set(Theme.themes.default);
-
 AppRegistry.registerComponent('rn', () => App);

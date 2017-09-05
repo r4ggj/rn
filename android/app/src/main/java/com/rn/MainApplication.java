@@ -3,10 +3,9 @@ package com.rn;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.github.xinthink.rnmk.ReactMaterialKitPackage;
-import com.imagepicker.ImagePickerPackage;
-import com.brentvatne.react.ReactVideoPackage;
+import ca.jaysoo.extradimensions.ExtraDimensionsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.imagepicker.ImagePickerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -27,10 +26,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new ReactMaterialKitPackage(),
-            new ImagePickerPackage(),
-            new ReactVideoPackage(),
-            new VectorIconsPackage()
+            new ExtraDimensionsPackage(),
+            new VectorIconsPackage(),
+            new ImagePickerPackage()
       );
     }
   };
